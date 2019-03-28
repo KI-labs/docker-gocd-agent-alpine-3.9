@@ -67,6 +67,8 @@ ADD docker-entrypoint.sh /
 
 RUN /prepare-agent.sh
 
+RUN apk add --no-cache nss
+
 USER go
 
 ENTRYPOINT ["/docker-entrypoint.sh"]
